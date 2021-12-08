@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "I Don't Care Your Review",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["Code/Content.js"]
+        }
+    ],
+    "browser_action" : {
+        "default_popup": "Code/Popup.html",
+        "default_title": "IDontCareYourReview"
+    }
+
+}
