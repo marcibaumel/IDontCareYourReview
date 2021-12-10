@@ -6,16 +6,28 @@
 *
 */
 
-const imdbPointClass = "RatingBarButtonBase__ContentWrap-sc-15v8ssr-0 jQXoLQ rating-bar__base-button"
-const imdbPointId = "hero-rating-bar__aggregate-rating";
 
-const x = browser.find_element_by_css_selector('[data-testid="hero-title-block__title"]')
+let elements = document.querySelectorAll('[data-test-id=UserReviews]');
 
-const title = document.getElementsByClassName("RatingBarButtonBase__Header-sc-15v8ssr-1 bufoWn");
+for (let element of elements) {
+  //element.style.display = "none";
+  element.innerHTML= "<img src=\"imgs\shut-up-arnold-schwarzenegger.gif\" width=\"400px\" height=\"150px\">";
+}
 
-title[0].innerHTML = "Helloooo"
+function removeElementsByClass(className){
+    const elements = document.getElementsByClassName(className);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+}
 
-x.innerHTML = "HELLLLOOO"
+document.getElementsByClassName('RatingBarButtonBase__ContentWrap-sc-15v8ssr-0 jQXoLQ rating-bar__base-button')[0].style.visibility = 'hidden';
+//document.getElementsByClassName('ipc-page-section ipc-page-section--base celwidget')[0].style.visibility = 'hidden';
+//document.getElementsByClassName('UserReviewsHeader__Header-k61aee-0 egCnbs')[0].style.visibility = 'hidden';
+//document.getElementsByClassName('styles__MetaDataContainer-sc-12uhu9s-0 cgqHBf')[0].style.visibility = 'hidden';
+//document.getElementsByClassName('ipc-inline-list ReviewContent__StyledInlineList-vlmc3o-0 hyrmRe baseAlt')[0].style.visibility = 'hidden';
 
-document.getElementById(imdbPointId).style.visibility = 'hidden';
+//for-ba kell
+document.getElementsByClassName('ipc-rating-star ipc-rating-star--base ipc-rating-star--imdb')[0].style.visibility = 'hidden';
+
 
